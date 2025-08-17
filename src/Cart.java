@@ -1,22 +1,28 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-class Cart {
-    private List<Product> items = new ArrayList<>();
+public class Cart implements CartOperations {
+    private final List<Product> products = new ArrayList<>();
 
-    public void addProduct(Product product) {
-        items.add(product);
+    @Override
+    public void addToCart(Product product) {
+        products.add(product);
+        System.out.println(product.getName() + " добавлен в корзину.");
     }
 
-    public void removeProduct(Product product) {
-        items.remove(product);
+    @Override
+    public void removeFromCart(Product product) {
+        if (products.remove(product))
+            System.out.println(product.getName() + " удалён из корзины.");
     }
 
-    public List<Product> getItems() {
-        return items;
-    }
-
+    @Override
     public double calculateTotal() {
-        return items.stream().mapToDouble(Product::getPrice).sum();
+        return products.stream().mapToDouble(Product::getPrice).sum();
+    }
+
+    public List<Product> getProducts() {
+        return Collections.unmodifiableList(products);
     }
 }
