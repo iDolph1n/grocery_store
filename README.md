@@ -32,15 +32,15 @@
 
 3. **Liskov Substitution Principle** – Принцип подстановки Барбары Лисков.
 
-*Пример: Любая реализация интерфейса [`CartOperations.java`]() может быть подставлена вместо переменной типа интерфейса в [`Main.java`](), и программа продолжит работать корректно без изменения остального кода.*
+*Пример: Любая реализация интерфейса [`CartOperations.java`](https://github.com/iDolph1n/grocery_store/blob/main/src/Main.java#L11) может быть подставлена вместо переменной типа интерфейса в [`Main.java`](https://github.com/iDolph1n/grocery_store/blob/main/src/Main), и программа продолжит работать корректно без изменения остального кода.*
 
 4. **Interface Segregation Principle** – Принцип разделения интерфейсов.
 
-*Пример: Интерфейсы [`CartOperations.java`]() (операция с корзиной) и [`ProductFilter.java`]() (фильтрация товаров) разделены, классы [`Cart.java`](https://github.com/iDolph1n/grocery_store/blob/main/src/Cart.java) и [`NameFilter.java`](). реализуют только те методы, которые им нужны.*
+*Пример: Интерфейсы [`CartOperations.java`](https://github.com/iDolph1n/grocery_store/blob/main/src/CartOperations.java) (операция с корзиной) и [`ProductFilter.java`]() (фильтрация товаров) разделены, классы [`Cart.java`](https://github.com/iDolph1n/grocery_store/blob/main/src/Cart.java) и [`NameFilter.java`](https://github.com/iDolph1n/grocery_store/blob/main/src/NameFilter.java). реализуют только те методы, которые им нужны.*
 
 5. **Dependency Inversion Principle** – Принцип инверсии зависимостей.
 
-*Пример: Программа опирается на интерфейс [`CartOperations.java`](), а не на конкретную реализацию [`Cart.java`](https://github.com/iDolph1n/grocery_store/blob/main/src/Cart.java).*
+*Пример: Программа опирается на интерфейс [`CartOperations.java`](https://github.com/iDolph1n/grocery_store/blob/main/src/CartOperations.java), а не на конкретную реализацию [`Cart.java`](https://github.com/iDolph1n/grocery_store/blob/main/src/Cart.java).*
 
 ## 🚀 Project launch (Запуск проекта)
 
